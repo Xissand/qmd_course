@@ -1,0 +1,4 @@
+SYSTEM = H atom ! description
+ISMEAR = 0 ! smearing type
+SIGMA = 0.1 ! smearing width (eV)
+NCORE = 4 ! number of cores per orbital

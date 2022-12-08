@@ -1,0 +1,9 @@
+H atom ! description
+1 ! length unit (AA)
+10.0 0.0 0.0 ! 1st lattice vector
+0.0 10.0 0.0 ! 2nd lattice vector
+0.0 0.0 10.0 ! 3rd lattice vector
+2 ! atom counts
+Cartesian ! coordinate basis
+0.0 0.0 0.0 ! coordinates of 1st atom
+0.0 0.0 ATOM ! coordinates of 2nd atom
