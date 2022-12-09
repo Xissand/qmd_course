@@ -46,6 +46,6 @@ zn = (
     -L
     / (2 * np.pi)
     * np.imag(np.log(np.sum((np.exp(-1.0j * 2 * np.pi / L * xgrid) * wzn))))
-)
+) * 0.529177210903
 
 print(f"z: {zn:.10f}")
