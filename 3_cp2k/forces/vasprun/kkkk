@@ -1,0 +1,4 @@
+Automatic uniform mesh ! description
+0 ! number of k points (or automatic)
+Gamma point included ! shift mesh?
+1 1 1 ! number of k points per dimension
