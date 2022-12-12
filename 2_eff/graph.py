@@ -15,8 +15,11 @@ for r in rs:
             line = data.readline()
         line = data.readline()
         # line = s[84]
-        energy = float(line.split()[1]) * 0.043  # convertion from kcal/mol to eV
+        energy = float(line.split()[2]) * 0.043  # convertion from kcal/mol to eV
         es.append(energy)
+
+es = np.array(es)
+es -= es[-1]
 
 mini = np.argmin(es)
 minr = rs[mini]
@@ -26,12 +29,12 @@ fig = plt.figure(figsize=(10, 6))
 plt.tight_layout()
 plt.plot(rs, es, "bo")
 plt.plot(rs, es, "b-")
-plt.vlines(minr, -27, -8, "red", "dashed")
+plt.vlines(minr, -4, 15, "red", "dashed")
 plt.ylabel("U")
 plt.xlabel("R")
-plt.text(minr + 0.2, -11, f"min of {mine:.2f} eV at {minr:.2f} A")
+plt.text(minr + 0.2, 11, f"min of {mine:.2f} eV at {minr:.2f} A")
 plt.xlim(left=0.0)
-plt.ylim((-27, -8))
+plt.ylim((-4,15))
 # plt.axes().xaxis.set_minor_locator(MultipleLocator(5))
 plt.savefig("graph.png")
 plt.show()

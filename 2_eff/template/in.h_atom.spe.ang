@@ -1,8 +1,8 @@
 variable	sname index h_atom.ang
 
 units 		real
-#newton		on
-boundary        f f f
+newton		on
+boundary    p p p
 
 atom_style	electron
 
@@ -33,8 +33,9 @@ thermo_modify   temp effTemp press effPress
 
 group H type 1
 
-fix dontmove H setforce 0 0 0
+fix dontmove H setforce 0.0 0.0 0.0
 min_style cg
-minimize 1e-4 1e-4 10000 10000
+minimize 1e-4 1e-4 100000 100000
+unfix dontmove
 
 run 		0
